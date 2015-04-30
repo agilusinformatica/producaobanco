@@ -14,6 +14,7 @@ namespace ProducaoDaycoval.Models
         public string Agente { get; set; }
 
         public string NumeroProposta { get; set; }
+        public string NumeroContrato { get; set; }
         public string Cliente { get; set; }
         public string Cpf { get; set; }
         public string Matricula { get; set; }
