@@ -24,7 +24,7 @@ namespace ProducaoDaycoval.Controllers
         [HttpPost]
         public ActionResult Index(Upload upload)
         {
-            string nomeArquivo = Path.GetTempFileName();
+            string nomeArquivo = @"e:\home\agilus\Temp\"+ Path.GetRandomFileName().Replace(".", "");
 
             upload.arquivo.SaveAs(nomeArquivo);
             XlsFile excel = new XlsFile(nomeArquivo);
@@ -35,6 +35,7 @@ namespace ProducaoDaycoval.Controllers
                 resposta = SerializaProposta(excel);
             }
 
+            System.IO.File.Delete(nomeArquivo);
             return this.Content(resposta, "text/xml");
         }
 
