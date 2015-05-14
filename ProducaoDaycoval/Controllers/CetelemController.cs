@@ -95,7 +95,7 @@ namespace ProducaoDaycoval.Controllers
                    
                     propostas.Add(proposta);
 
-                    linha += 3;
+                    linha += 2;
                 }
             }
             return Utils.ToXML<List<Proposta>>(propostas);
